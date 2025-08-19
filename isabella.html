@@ -1,70 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8" />
-  <title>Actividad Listas y Tablas</title>
+  <title>Tarea 1 sw 3: Listas y Tablas</title>
+  <style>
+    /* Paleta de  colores que usaré en los titulos y en la tabla*/
+    :root{
+      --pink-bg:   #ffd6eb; 
+      --pink-900:  #ad1457; 
+      --pink-700:  #c2185b; 
+      --pink-400:  #f48fb1; 
+      --pink-100:  #ffe8f1; 
+    }
+
+    body{
+      margin:0;
+      padding:22px;
+      background: var(--pink-bg);   /* el color del fondo*/
+      font-family: Arial, Helvetica, sans-serif;
+      color:#333;
+      line-height:1.6;
+    }
+
+    h1{
+      color: var(--pink-700);
+      text-align:center;
+      margin: 8px 0 16px;
+    }
+    h2{
+      color: var(--pink-900);
+      margin: 18px 0 8px;
+    }
+
+    /* Listas diseño*/
+    ul, ol{ margin-left: 26px; }
+    li{ margin: 4px 0; }
+
+    /* Tabla diseño*/
+    table{
+      width: 100%;
+      max-width: 920px;
+      margin: 14px auto 28px;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--pink-400);
+    }
+    thead th{
+      background: var(--pink-900);
+      color:#fff;
+      padding:10px;
+      border:1px solid var(--pink-400);
+      text-align:center;
+    }
+    td{
+      padding:9px;
+      border:1px solid var(--pink-400);
+      text-align:center;
+    }
+    tbody tr:nth-child(even){ background: var(--pink-100); }
+  </style>
 </head>
-<body bgcolor="#f0f8ff"> <!-- color de fondo de la página -->
+<body>
 
-  <h1><font color="darkblue">Actividad: Listas y Tablas en HTML</font></h1>
+  <!-- PARTE 1 -->
+  <h1> Listas Ordenadas y Desordenadas</h1>
 
-  <h2><font color="green">Secciones del Supermercado</font></h2>
+  <!-- 1) muestro solo las secciones -->
+  <h2>Secciones Principales del Supermercado</h2>
   <ul>
-    <li><font color="red">Abarrotes</font></li>
-    <li><font color="blue">Ropa</font></li>
-    <li><font color="brown">Carnes</font></li>
-    <li><font color="purple">Lácteos</font></li>
-    <li><font color="orange">Licores</font></li>
+    <li>Abarrotes</li>
+    <li>Ropa</li>
+    <li>Carnes</li>
+    <li>Lácteos</li>
+    <li>Licores</li>
   </ul>
 
-  <h2><font color="green">Productos por Sección</font></h2>
+  <!-- 2) Después qué contiene cada sección  -->
+  <h2>Detalle de Productos según la Sección</h2>
   <ol>
-    <li><font color="brown">Carnes</font>
+    <!-- Abarrotes -->
+    <li>Abarrotes
+      <ul>
+        <li>Enlatados
+          <ul>
+            <li>Maicitos</li>
+            <li>Atún isabella</li>
+            <li>Salchichas zenú</li>
+          </ul>
+        </li>
+        <li>Granos 
+          <ul>
+            <li>Arroz</li>
+            <li>Lentejas</li>
+            <li>Alverjas</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Ropa -->
+    <li>Ropa
+      <ul>
+        <li>Damas
+          <ul>
+            <li>Crop-tops</li>
+            <li>Corsets</li>
+            <li>Vestidos</li>
+          </ul>
+        </li>
+        <li>Caballeros
+          <ul>
+            <li>Camisas</li>
+            <li>Gorras</li>
+            <li>Busos</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Carnes -->
+    <li>Carnes
       <ul>
         <li>Pollo
           <ul>
             <li>Alas</li>
-            <li>Pechuga</li>
+            <li>Pechugas</li>
+            <li>Muslos</li>
           </ul>
         </li>
         <li>Res
           <ul>
             <li>Cadera</li>
             <li>Bola</li>
+            <li>Lomo caracho</li>
           </ul>
         </li>
-        <li>Cerdo</li>
+        <li>Cerdo
+          <ul>
+            <li>Costilla</li>
+            <li>Chuleta</li>
+            <li>Tocino</li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><font color="blue">Refrescos</font>
+
+    <!-- Lacteos -->
+    <li>Lácteos
       <ul>
-        <li>Coca Cola</li>
-        <li>Pepsi</li>
-        <li>Jugo de naranja</li>
+        <li>Leche
+          <ul>
+            <li>Entera</li>
+            <li>Deslactosada</li>
+            <li>Descremada</li>
+          </ul>
+        </li>
+        <li>Queso
+          <ul>
+            <li>Doble crema</li>
+            <li>Costeño</li>
+            <li>Campesino</li>
+          </ul>
+        </li>
+        <li>Yogurt
+          <ul>
+            <li>Piña</li>
+            <li>Fresa</li>
+            <li>Mora</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Licores jeje -->
+    <li>Licores
+      <ul>
+        <li>Cerveza
+          <ul>
+            <li>Budweiser</li>
+            <li>Poker</li>
+            <li>Aguila light</li>
+          </ul>
+        </li>
+        <li>Vino
+          <ul>
+            <li>Tinto</li>
+            <li>Blanco</li>
+            <li>Manzana</li>
+          </ul>
+        </li>
+        <li>Ron
+          <ul>
+            <li>Blanco</li>
+            <li>Dorado</li>
+            <li>Añejo</li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ol>
 
-  <h2><font color="darkred">Tabla de Cumpleaños</font></h2>
-  <table border="2" cellpadding="8" cellspacing="2" width="80%" bgcolor="white">
-    <tr bgcolor="navy">
-      <th><font color="white">Nombre</font></th>
-      <th><font color="white">Fecha de cumpleaños</font></th>
-      <th><font color="white">Año</font></th>
-      <th><font color="white">Edad</font></th>
-    </tr>
-    <tr bgcolor="#e6f7ff" align="center"><td>Juanda</td><td>9 septiembre</td><td>2003</td><td>22</td></tr>
-    <tr bgcolor="#fff2e6" align="center"><td>Diego</td><td>25 julio</td><td>2004</td><td>21</td></tr>
-    <tr bgcolor="#e6f7ff" align="center"><td>Cris</td><td>31 octubre</td><td>2003</td><td>22</td></tr>
-    <tr bgcolor="#fff2e6" align="center"><td>Sofi</td><td>11 enero</td><td>2004</td><td>21</td></tr>
-    <tr bgcolor="#e6f7ff" align="center"><td>Brayan</td><td>4 febrero</td><td>2003</td><td>22</td></tr>
-    <tr bgcolor="#fff2e6" align="center"><td>Vela</td><td>6 julio</td><td>2004</td><td>21</td></tr>
-    <tr bgcolor="#e6f7ff" align="center"><td>Pau</td><td>6 julio</td><td>2003</td><td>22</td></tr>
-    <tr bgcolor="#fff2e6" align="center"><td>Camilo</td><td>2 febrero</td><td>2004</td><td>21</td></tr>
-    <tr bgcolor="#e6f7ff" align="center"><td>Davo</td><td>28 junio</td><td>2003</td><td>22</td></tr>
-    <tr bgcolor="#fff2e6" align="center"><td>Francisco</td><td>21 junio</td><td>2004</td><td>21</td></tr>
-    <tr bgcolor="#e6f7ff" align="center"><td>Jhonny</td><td>9 mayo</td><td>2003</td><td>22</td></tr>
-    <tr bgcolor="#fff2e6" align="center"><td>Yeison</td><td>16 octubre</td><td>2004</td><td>21</td></tr>
+  <!-- la tablita de los cumples-->
+  <h1>Tabla de Cumpleaños</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha de Cumpleaños</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- mis compañeritos hermosos y usted profe jaja-->
+      <tr><td>Juan David Perdomo</td><td>9 septiembre 2004</td><td>20</td></tr>
+      <tr><td>Juan Diego Gomez</td><td>25 julio 2004</td><td>21</td></tr>
+      <tr><td>Cristhian Camilo Unas</td><td>31 octubre 2003</td><td>22</td></tr>
+      <tr><td>Ana Sofia Arango</td><td>11 enero 2006</td><td>19</td></tr>
+      <tr><td>Brayan Steven Gomes</td><td>4 febrero 2005</td><td>20</td></tr>
+      <tr><td>Juan David Vela</td><td>6 julio 2006</td><td>19</td></tr>
+      <tr><td>Paula Andrea Muñoz</td><td>6 julio 2004</td><td>21</td></tr>
+      <tr><td>Adrian Camilo Bergaño</td><td>2 febrero 2004</td><td>21</td></tr>
+      <tr><td>Jose David Arteaga</td><td>28 junio 2001</td><td>24</td></tr>
+      <tr><td>Francisco Javier Obando</td><td>21 junio 1982</td><td>43</td></tr>
+    </tbody>
   </table>
+
 </body>
 </html>
